@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:23-alpine
 
 # Instalar dependências necessárias para o Puppeteer no Alpine
 RUN apk update && apk add --no-cache \
@@ -8,9 +8,7 @@ RUN apk update && apk add --no-cache \
     freetype-dev \
     harfbuzz \
     ca-certificates \
-    ttf-freefont \
-    nodejs \
-    yarn
+    ttf-freefont
 
 # Configurar variáveis de ambiente para o Puppeteer
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
