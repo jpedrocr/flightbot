@@ -55,7 +55,7 @@ GET /api/flights/info/:flightNumber
 
 ### Buscar Voos
 
-Pesquisa voos disponíveis entre aeroportos.
+Pesquisa voos disponíveis entre aeroportos usando web scraping do Skyscanner.
 
 ```
 GET /api/flights/search
@@ -67,12 +67,28 @@ GET /api/flights/search
 |--------------|--------|--------------------|------------|
 | origin       | string | Código IATA do aeroporto de origem (ex: LIS) | Sim |
 | destination  | string | Código IATA do aeroporto de destino (ex: OPO) | Sim |
-| date         | string | Data do voo (formato YYYY-MM-DD) | Não |
+| date         | string | Data do voo (formato YYYY-MM-DD) | Sim |
 
 #### Resposta de Exemplo
 
 ```json
 [
+  {
+    "flightNumber": "FR1001",
+    "airline": "Ryanair",
+    "departure": {
+      "airport": "LIS",
+      "scheduled": "2025-05-04T06:20:00Z"
+    },
+    "arrival": {
+      "airport": "OPO",
+      "scheduled": "2025-05-04T08:15:00Z"
+    },
+    "duration": "1h 55m",
+    "price": "99,99 EUR",
+    "stops": "Direto",
+    "url": "https://www.skyscanner.pt/transport/flights/lis/opo/230504/economy"
+  },
   {
     "flightNumber": "TP1920",
     "airline": "TAP Portugal",
@@ -84,22 +100,10 @@ GET /api/flights/search
       "airport": "OPO",
       "scheduled": "2025-05-04T10:25:00Z"
     },
-    "price": "120.50 EUR",
-    "seatsAvailable": 42
-  },
-  {
-    "flightNumber": "TP1924",
-    "airline": "TAP Portugal",
-    "departure": {
-      "airport": "LIS",
-      "scheduled": "2025-05-04T14:30:00Z"
-    },
-    "arrival": {
-      "airport": "OPO",
-      "scheduled": "2025-05-04T16:40:00Z"
-    },
-    "price": "145.75 EUR",
-    "seatsAvailable": 23
+    "duration": "2h 10m",
+    "price": "120,50 EUR",
+    "stops": "Direto",
+    "url": "https://www.skyscanner.pt/transport/flights/lis/opo/230504/economy"
   }
 ]
 ```
@@ -179,3 +183,20 @@ GET /api/flights/alerts/:id
 ## Autenticação
 
 Autenticação será implementada em versões futuras da API.
+
+## Implementação de Web Scraping
+
+A busca de voos (`/api/flights/search`) é realizada através de web scraping no site do Skyscanner, permitindo obter os seguintes dados:
+
+- Companhias aéreas disponíveis
+- Preços (o mais barato para classe econômica)
+- Horários de partida e chegada
+- Duração do voo
+- Informações sobre escalas
+
+O sistema está configurado para:
+- Ordenar os resultados pelo preço mais baixo
+- Apresentar apenas voos válidos (com informações completas)
+- Tratar possíveis erros de conexão ou estrutura do site
+
+Em ambiente de desenvolvimento, é possível usar dados mockados definindo a variável de ambiente `USE_MOCK_DATA=true`.
