@@ -54,15 +54,22 @@ exports.searchFlights = async (origin, destination, date) => {
 
     // Configuração do navegador Puppeteer
     const browser = await puppeteer.launch({
-      headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      headless: false, // Modo visível para debug
+      args: [
+        '--no-sandbox', 
+        '--disable-setuid-sandbox',
+        '--window-size=1366,768'
+      ],
+      defaultViewport: {
+        width: 1366,
+        height: 768
+      }
     });
     const page = await browser.newPage();
 
     try {
       // Configurações iniciais da página
       await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
-      await page.setViewport({ width: 1366, height: 768 });
 
       // Formatação da data para o formato do Skyscanner (YYMMDD)
       const formattedDate = formatDateForSkyscanner(date);
@@ -76,6 +83,7 @@ exports.searchFlights = async (origin, destination, date) => {
 
       // Lidar com popups/cookies
       try {
+        console.log('Verificando se há popup de cookies...');
         await page.waitForSelector('[data-testid="accept-cookie-banner"]', { timeout: 5000 });
         await page.click('[data-testid="accept-cookie-banner"]');
         console.log('Cookies aceitos');
@@ -86,6 +94,10 @@ exports.searchFlights = async (origin, destination, date) => {
       // Aguardar carregamento dos resultados
       console.log('Aguardando resultados...');
       await page.waitForSelector('[data-testid="itinerary-card"]', { timeout: 30000 });
+
+      // Adicionar atraso para debug
+      console.log('Aguardando 5 segundos para visualização...');
+      await new Promise(resolve => setTimeout(resolve, 5000));
 
       // Extrair dados dos voos
       console.log('Extraindo dados dos voos...');
@@ -142,11 +154,18 @@ exports.searchFlights = async (origin, destination, date) => {
         return priceA - priceB;
       });
 
+      // Aguardar mais alguns segundos antes de fechar
+      console.log('Aguardando 3 segundos antes de fechar o navegador...');
+      await new Promise(resolve => setTimeout(resolve, 3000));
+
       await browser.close();
       return sortedFlights;
 
     } catch (error) {
       console.error('Erro durante o scraping:', error);
+      // Manter o navegador aberto por mais tempo em caso de erro para debug
+      console.log('Erro detectado. Mantendo o navegador aberto por 15 segundos para debug...');
+      await new Promise(resolve => setTimeout(resolve, 15000));
       await browser.close();
       throw new Error(`Falha na busca de voos: ${error.message}`);
     }
