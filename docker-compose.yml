@@ -24,7 +24,7 @@ services:
       - PORT=3000
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-      - USE_MOCK_DATA=true
+      - USE_MOCK_DATA=false
     volumes:
       - ./:/app
       - /app/node_modules
