@@ -24,8 +24,10 @@ services:
       - PORT=3000
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-      - USE_MOCK_DATA=false
+      - USE_MOCK_DATA=false  # Defina como true para usar dados mockados
+      - DISPLAY=$DISPLAY     # Compartilhar o display para mostrar o navegador
     volumes:
       - ./:/app
       - /app/node_modules
+      - /tmp/.X11-unix:/tmp/.X11-unix  # Compartilhar o X11 socket para UI
     command: npm run dev
