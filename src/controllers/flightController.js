@@ -24,8 +24,19 @@ exports.searchFlights = async (req, res) => {
   try {
     const { origin, destination, date } = req.query;
     
-    if (!origin || !destination) {
-      return res.status(400).json({ error: 'Origem e destino são obrigatórios' });
+    if (!origin || !destination || !date) {
+      return res.status(400).json({ 
+        error: 'Todos os parâmetros são obrigatórios', 
+        details: 'Origem, destino e data são obrigatórios para a busca de voos' 
+      });
+    }
+    
+    // Validação básica da data (formato YYYY-MM-DD)
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      return res.status(400).json({
+        error: 'Formato de data inválido',
+        details: 'A data deve estar no formato YYYY-MM-DD'
+      });
     }
     
     const flights = await flightService.searchFlights(origin, destination, date);
