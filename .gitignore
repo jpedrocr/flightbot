@@ -29,3 +29,6 @@ Thumbs.db
 
 # Arquivos de cobertura de testes
 coverage/
+
+# Artefactos do graphify (grafo, cache, HTML) — regeneráveis, não versionar.
+graphify-out/
