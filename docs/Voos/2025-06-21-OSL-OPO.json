@@ -1,0 +1,53 @@
+{
+  "viagem": {
+    "data": "2025-06-21",
+    "origem": "OSL",
+    "destino": "OPO",
+    "voos": [
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211315--31915-1-15055-2506212125?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 1: Total cost 166 €.  Flight with Ryanair UK Ltd., Ryanair. Departing from Oslo Gardermoen at 13:15, arriving in Porto at 21:25. Indirect flight taking 9 hours 10 minutes with one stop in London Stansted. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211315--31915-1-15055-2506211845?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 2: Total cost 198 €.  Flight with Ryanair UK Ltd., Ryanair. Departing from Oslo Gardermoen at 13:15, arriving in Porto at 18:45. Indirect flight taking 6 hours 30 minutes with one stop in London Stansted. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506212020--31799,-32356-1-15055-2506220720?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 3: Total cost 216 €.  Flight with SWISS, easyJet. Departing from Oslo Gardermoen at 20:20, arriving in Porto at 07:20, one day later. Indirect flight taking 12 hours with one stop in Geneva. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211225--32013,-30685-1-15055-2506211830?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 4: Total cost 302 €.  Flight with Norwegian, Norwegian Air Sweden. Departing from Oslo Gardermoen at 12:25, arriving in Porto at 18:30. Indirect flight taking 7 hours 5 minutes with one stop in Stockholm Arlanda. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211300--31781-1-15055-2506211900?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 5: Total cost 343 €.  Flight with TAP Air Portugal. Departing from Oslo Gardermoen at 13:00, arriving in Porto at 19:00. Indirect flight taking 7 hours with one stop in Lisbon. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211310--31781-1-15055-2506211900?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 6: Total cost 360 €.  Flight with TAP Air Portugal. Departing from Oslo Gardermoen at 13:10, arriving in Porto at 19:00. Indirect flight taking 6 hours 50 minutes with one stop in Lisbon. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506210800--31901,-32132-1-15055-2506211535?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 7: Total cost 398 €.  Flight with Scandinavian Airlines, KLM. Departing from Oslo Gardermoen at 08:00, arriving in Porto at 15:35. Indirect flight taking 8 hours 35 minutes with one stop in Amsterdam Schiphol. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506210825--32610-1-15055-2506211545?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 8: Total cost 452 €.  Flight with airBaltic. Departing from Oslo Gardermoen at 08:25, arriving in Porto at 15:45. Indirect flight taking 8 hours 20 minutes with one stop in Riga International. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211720--32132-1-15055-2506212215?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 9: Total cost 539 €.  Flight with KLM. Departing from Oslo Gardermoen at 17:20, arriving in Porto at 22:15. Indirect flight taking 5 hours 55 minutes with one stop in Amsterdam Schiphol. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211415--32132-1-15055-2506212215?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 10: Total cost 544 €.  Flight with KLM Cityhopper, KLM. Departing from Oslo Gardermoen at 14:15, arriving in Porto at 22:15. Indirect flight taking 9 hours with one stop in Amsterdam Schiphol. Prices include taxes and charges. "
+      },
+      {
+        "link": "https://www.skyscanner.pt/transport/flights/OSL/OPO/250621/config/15093-2506211300--31901-1-15055-2506212025?adultsv2=1&cabinclass=economy&adultsv2=1&childrenv2=&duration=720&inboundaltsenabled=false&outboundaltsenabled=false&ref=home&rtn=0&stops=!twoPlusStops",
+        "text": "Flight option 11: Total cost 558 €.  Flight with TAP Air Portugal, Portugalia Airlines. Departing from Oslo Gardermoen at 13:00, arriving in Porto at 20:25. Indirect flight taking 8 hours 25 minutes with one stop in Lisbon. Prices include taxes and charges. "
+      }
+    ]
+  }
+}
